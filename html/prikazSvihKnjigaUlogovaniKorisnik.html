@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Knjižara</title>
+    <link rel="stylesheet" href="../css/prikazSvihKnjiga.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+</head>
+
+<body>
+    <nav class="navbar navbar-expand-md bg-custom">
+        <div class="container">
+            <a class="navbar-brand text-custom" href="#">Moja knjižara</a>
+            <button class="navbar-toggler custom-toggler" type="button" data-toggle="collapse" data-target="#navbarNav"
+                aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ml-auto">
+                    <li class="nav-item">
+                        <a class="nav-link text-custom" href="dodavanjeKnjige.html" id="logout-link">Dodaj knjigu</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link text-custom" href="prikazSvihKorisnika.html" id="logout-link">Korisnici</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link text-custom" href="prikazSvihKnjiga.html" id="logout-link">Odjavi se</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+    <div class="container-fluid header">
+        <div class="row">
+            <div class="col-md-12 text-center">
+                <img src="../slike/95f8588d6469a16271ea2d2fad419d00.png" alt="Bookstore Logo" class="logo">
+                <h1 class="header-title">Dobrodošli u knjižaru</h1>
+            </div>
+        </div>
+        <div class="col-md-12 text-center">
+            <div class="input-group mb-3">
+                <input type="text" class="form-control" id="searchInput" placeholder="Pretraži knjige po nazivu...">
+                <button class="btn btn-secondary" type="button" id="searchButton">Pretraži po nazivu</button>
+                
+                <input type="text" class="form-control" id="searchInputTwo" placeholder="Pretraži knjige po autoru...">
+                <button class="btn btn-secondary" type="button" id="searchButtonTwo">Pretraži po autoru</button>
+            </div>
+        </div>
+        <div class="col-md-12 text-center">
+            <button id="sortAscendingButton" class="btn btn-primary">Sortiraj knjige rastuće</button>
+            <button id="sortDescendingButton" class="btn btn-primary">Sortiraj knjige opadajuće</button><br><br>
+        </div>
+        <div class="row" id="bookList">
+            
+        </div>
+    </div>
+    <div id="editForm" class="edit-form">
+        <h2 style="text-align: center;">Izmeni knjigu</h2>
+        <div class="edit-form-scrollable">
+            <button id="closeButton" class="close-button">×</button>
+            <form id="editUserForm">
+                <label for="editAutor">Autor:</label>
+                <input type="text" id="editAutor" name="editAutor">
+        
+                <label for="editBrojStranica">Broj stranica:</label>
+                <input type="text" id="editBrojStranica" name="editBrojStranica">
+        
+                <label for="editCena">Cena:</label>
+                <input type="text" id="editCena" name="editCena">
+        
+                <label for="editGodinaIzdavanja">Godina izdavanja:</label>
+                <input type="text" id="editGodinaIzdavanja" name="editGodinaIzdavanja">
+        
+                <label for="editIsbn">ISBN:</label>
+                <input type="text" id="editIsbn" name="editIsbn" readonly>
+        
+                <label for="editIzdavackaKuca">Izdavačka kuća:</label>
+                <input type="text" id="editIzdavackaKuca" name="editIzdavackaKuca">
+        
+                <label for="editJezik">Jezik:</label>
+                <input type="text" id="editJezik" name="editJezik">
+        
+                <label for="editNaziv">Naziv:</label>
+                <input type="text" id="editNaziv" name="editNaziv">
+        
+                <label for="editOcena">Ocena:</label>
+                <input type="text" id="editOcena" name="editOcena" min="1" max="5" step="0.1">
+        
+                <label for="editOpis">Opis:</label>
+                <input type="text" id="editOpis" name="editOpis">
+        
+                <label for="editPismo">Pismo:</label>
+                <input type="text" id="editPismo" name="editPismo">
+        
+                <label for="editSlika">Slika (URL):</label>
+                <input type="text" id="editSlika" name="editSlika">
+        
+                <label for="editTipPoveza">Tip poveza:</label>
+                <input type="text" id="editTipPoveza" name="editTipPoveza">
+            
+                <button type="button" id="updateButton" class="btn-primary" style="width: 100%;">Izmeni</button>
+            </form>
+        </div>
+    </div>
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-database.js"></script>
+    <script src="../javascript/prikazSvihKnjiga.js"></script>
+
+    <footer class="footer mt-5">
+        <div class="container text-center">
+            <p>&copy; 2023 Knjižara. Sva prava rezervisana</p>
+            <p>Kontakt: oliver.kojic22@gmail.com</p>
+        </div>
+    </footer>
+</body>
+
+</html>

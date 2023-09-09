@@ -1,0 +1,87 @@
+/* Add your CSS styles for the bookstore page here */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+}
+
+header {
+    background-color: #333;
+    color: #fff;
+    text-align: center;
+    padding: 1rem 0;
+}
+
+main {
+    padding: 2rem;
+}
+
+.book-form-container {
+    background-color: #fff;
+    padding: 1rem;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+}
+
+label {
+    margin-bottom: 0.5rem;
+}
+
+input[type="text"],
+input[type="number"],
+input[type="email"] {
+    padding: 0.5rem;
+    margin-bottom: 1rem;
+    border: 1px solid #ccc;
+    border-radius: 3px;
+}
+
+button[type="submit"] {
+    background-color: #333;
+    color: #fff;
+    padding: 0.5rem 1rem;
+    border: none;
+    border-radius: 3px;
+    cursor: pointer;
+}
+
+button[type="submit"]:hover {
+    background-color: #555;
+}
+
+.footer {
+    background-color: #f8f8f8;
+    padding: 20px 0;
+}
+
+.bg-custom {
+    background-color: #f9e8e0; /* Custom background color */
+}
+
+.text-custom {
+    color: #4a90e2; /* Custom text color */
+}
+
+.custom-toggler {
+    background-color: #4a90e2; /* Custom color for the toggle button */
+    border-color: #4a90e2; /* Custom border color for the toggle button */
+}
+
+.cancel-button {
+    background-color: #e74c3c; /* Custom background color */
+    color: white; /* Text color */
+    border: none; /* Remove border */
+    padding: 10px 20px; /* Adjust padding for better size */
+    cursor: pointer; /* Add a pointer cursor on hover */
+    margin-top: 10px; /* Add some top margin for spacing */
+}
+
+/* Style for the "Cancel" button on hover */
+.cancel-button:hover {
+    background-color: #c0392b; /* Custom background color on hover */
+}

@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <!-- Add your page's title and other meta tags -->
+</head>
+<body>
+    <!-- Add your input fields for editing book data -->
+    <label for="title">Title:</label>
+    <input type="text" id="title">
+
+    <label for="author">Author:</label>
+    <input type="text" id="author">
+
+    <label for="rating">Rating:</label>
+    <input type="text" id="rating">
+
+    <!-- Add the "Save" button -->
+    <button id="saveBtn">Save</button>
+
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+            // Read the book data from the URL query parameters
+            const queryString = window.location.search;
+            const urlParams = new URLSearchParams(queryString);
+            const bookData = {
+                naziv: urlParams.get("naziv"),
+                autor: urlParams.get("autor"),
+                ocena: urlParams.get("ocena"),
+                // Add other book attributes...
+            };
+
+            // Populate the input fields with the book data for editing
+            const titleInput = document.getElementById("title");
+            const authorInput = document.getElementById("author");
+            const ratingInput = document.getElementById("rating");
+
+            titleInput.value = bookData.naziv;
+            authorInput.value = bookData.autor;
+            ratingInput.value = bookData.ocena;
+
+            // Add event listener to the "Save" button
+            const saveBtn = document.getElementById("saveBtn");
+            saveBtn.addEventListener("click", function () {
+                // Get the updated book data from the input fields
+                const updatedBookData = {
+                    naziv: titleInput.value,
+                    autor: authorInput.value,
+                    ocena: ratingInput.value,
+                    // Add other book attributes...
+                };
+
+                // Perform your logic here to update the book data in the database
+                // For demonstration purposes, I'll just display an alert with the updated book data
+                alert("Updated Book Data:\n" + JSON.stringify(updatedBookData));
+            });
+        });
+    </script>
+</body>
+</html>

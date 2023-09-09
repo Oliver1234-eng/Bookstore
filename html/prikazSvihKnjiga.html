@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Knjižara</title>
+    <link rel="stylesheet" href="../css/prikazSvihKnjigaPocetna.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+</head>
+
+<body>
+    <nav class="navbar navbar-expand-md bg-custom">
+        <div class="container">
+            <a class="navbar-brand text-custom" href="#">Moja knjižara</a>
+            <button class="navbar-toggler custom-toggler" type="button" data-toggle="collapse" data-target="#navbarNav"
+                aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ml-auto">
+                    <li class="nav-item">
+                        <a class="nav-link text-custom" href="#" id="login-link">Prijavi se</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link text-custom" href="prikazSvihKorisnika.html" id="register-link">Korisnici</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+    <div class="container-fluid header">
+        <div class="row">
+            <div class="col-md-12 text-center">
+                <img src="../slike/95f8588d6469a16271ea2d2fad419d00.png" alt="Bookstore Logo" class="logo">
+                <h1 class="header-title">Dobrodošli u knjižaru</h1>
+            </div>
+        </div>
+        <div class="col-md-12 text-center">
+            <div class="input-group mb-3">
+                <input type="text" class="form-control" id="searchInput" placeholder="Pretraži knjige po nazivu...">
+                <button class="btn btn-secondary" type="button" id="searchButton">Pretraži po nazivu</button>
+                
+                <input type="text" class="form-control" id="searchInputTwo" placeholder="Pretraži knjige po autoru...">
+                <button class="btn btn-secondary" type="button" id="searchButtonTwo">Pretraži po autoru</button>
+            </div>
+        </div>
+        <div class="col-md-12 text-center">
+            <button id="sortAscendingButton" class="btn btn-primary">Sortiraj knjige rastuće</button>
+            <button id="sortDescendingButton" class="btn btn-primary">Sortiraj knjige opadajuće</button><br><br>
+        </div>
+        <div class="row" id="bookList">
+        </div>
+    </div>
+    <div id="login-popup" class="popup">
+        <div class="popup-content">
+            <span class="popup-close" id="close-popup">&times;</span>
+            <h2 style="text-align: center;">Prijava na sistem</h2>
+            <form id="login-form" onsubmit="return loginUser()">
+                <label for="username">Korisničko ime:</label>
+                <input type="text" id="username" name="username" onblur="checkEmpty('username')"><br><br>
+                <label for="password">Lozinka:</label>
+                <input type="password" id="password" name="password" onblur="checkEmpty('password')"><br><br>
+                <button type="submit" class="btn-primary" style="width: 100%;">Prijavi se</button>
+            </form>
+        </div>
+    </div>
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-database.js"></script>
+    <script src="../javascript/prikazSvihKnjigaPocetna.js"></script>
+
+    <footer class="footer mt-5">
+        <div class="container text-center">
+            <p>&copy; 2023 Knjižara. Sva prava rezervisana</p>
+            <p>Kontakt: oliver.kojic22@gmail.com</p>
+        </div>
+    </footer>
+</body>
+
+</html>

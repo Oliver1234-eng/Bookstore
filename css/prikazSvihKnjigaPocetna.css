@@ -1,0 +1,257 @@
+.container {
+    max-width: 1200px; /* Adjust this value as per your design */
+}
+
+@media (max-width: 768px) {
+    .container {
+        max-width: 90%;
+    }
+}
+
+body {
+    font-family: "Arial", sans-serif;
+    background: #f8f8f8 url('../slike/l-intro-1647959867.jpg') repeat center;
+    background-size: cover;
+}
+
+.navbar {
+    padding: 10px 0;
+}
+
+.navbar-brand {
+    font-size: 1.8rem;
+    font-weight: bold;
+    color: #007bff; /* Replace with your desired color */
+}
+
+.nav-link {
+    font-size: 1.1rem;
+    color: #555; /* Replace with your desired color */
+    padding: 0.5rem 1rem;
+}
+
+.nav-link:hover {
+    color: #007bff; /* Replace with your desired hover color */
+}
+
+.card {
+    border: none;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+    background-color: #fff;
+}
+
+.card:hover {
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+.card-title {
+    font-size: 1.2rem;
+    font-weight: bold;
+}
+
+.card-text {
+    color: #555;
+    font-size: 0.9rem;
+}
+
+.card-body {
+    padding: 1.5rem;
+}
+
+.card-img-top {
+    height: 250px;
+    object-fit: cover;
+    border-radius: 8px 8px 0 0;
+}
+
+/* Customize badge and button styles */
+.badge {
+    font-size: 0.8rem;
+}
+
+.btn {
+    font-size: 0.9rem;
+}
+
+.header {
+    /* background-color: #007bff; */
+    padding: 20px 0;
+    /* color: #fff; */
+}
+
+.header-title {
+    color: #fff;
+    font-size: 2rem;
+    margin-top: 10px;
+}
+
+.logo {
+    max-width: 100px;
+    display: inline-block;
+}
+
+.card-details {
+    background-color: #f8f8f8;
+    padding: 10px;
+    border-radius: 8px;
+    margin-top: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+button.details-btn-yellow {
+    background-color: #ffc107;
+    color: #fff;
+}
+
+.rating-popup {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    z-index: 9999;
+}
+
+.rating-popup .star {
+    font-size: 24px;
+    color: #ccc;
+    cursor: pointer;
+}
+
+.rating-popup .star.active {
+    color: #ffc107;
+}
+
+.footer {
+    background-color: #f8f8f8;
+    padding: 20px 0;
+}
+
+/* Custom styles for the bookstore-themed navigation bar */
+.bg-custom {
+    background-color: #f9e8e0; /* Custom background color */
+}
+
+.text-custom {
+    color: #4a90e2; /* Custom text color */
+}
+
+.custom-toggler {
+    background-color: #4a90e2; /* Custom color for the toggle button */
+    border-color: #4a90e2; /* Custom border color for the toggle button */
+}
+
+.popup {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.7);
+    z-index: 1;
+    justify-content: center;
+    align-items: center;
+}
+
+.popup-content {
+    background-color: #f9e8e0; /* Custom background color */
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.3); /* Add a subtle shadow effect */
+}
+
+.popup-close {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    font-size: 24px;
+    cursor: pointer;
+    color: #4a90e2; /* Custom close button color */
+}
+
+h2 {
+    font-size: 24px;
+    margin-bottom: 20px;
+    color: #4a90e2; /* Custom heading color */
+}
+
+label {
+    display: block;
+    font-size: 18px;
+    margin-bottom: 10px;
+    color: #333; /* Custom label color */
+}
+
+input[type="text"],
+input[type="password"] {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 16px;
+}
+
+button[type="submit"] {
+    background-color: #4a90e2; /* Custom button background color */
+    color: #fff; /* Custom button text color */
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    font-size: 18px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+button[type="submit"]:hover {
+    background-color: #357ABD; /* Custom hover background color */
+}
+
+.edit-form {
+    display: none;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: white;
+    padding: 20px;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
+    z-index: 1000;
+}
+
+/* CSS for overlay (to dim the background when the form is open) */
+.overlay {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    z-index: 999;
+}
+
+.edit-form-scrollable {
+    max-height: 500px; /* Adjust the maximum height as needed */
+    overflow: auto;
+}
+
+.close-button {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    font-size: 20px;
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+    color: #999; /* Change the color as desired */
+}
+
+.close-button:hover {
+    color: #f00; /* Change the color on hover if desired */
+}
